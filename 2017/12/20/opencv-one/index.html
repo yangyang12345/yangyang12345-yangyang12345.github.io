@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="于诗洋, 博客" />
+  <meta name="keywords" content="python,AI,opencv,图像," />
 
 
 
@@ -86,16 +86,18 @@
 
 
 
-<meta name="description" content="佛曰：前世如若不相欠，今生又怎会相见">
-<meta property="og:type" content="website">
-<meta property="og:title" content="于诗洋-Mr.Yu">
-<meta property="og:url" content="http://yushiyang.top/archives/2017/page/2/index.html">
+<meta name="description" content="opencv作为一个老牌的图像处理库，拥有其独特的魅力，这篇文章将会简单介绍以opencv为基础的人脸识别。">
+<meta name="keywords" content="python,AI,opencv,图像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于opencv的图像识别（一）--人脸识别">
+<meta property="og:url" content="http://yushiyang.top/2017/12/20/opencv-one/index.html">
 <meta property="og:site_name" content="于诗洋-Mr.Yu">
-<meta property="og:description" content="佛曰：前世如若不相欠，今生又怎会相见">
+<meta property="og:description" content="opencv作为一个老牌的图像处理库，拥有其独特的魅力，这篇文章将会简单介绍以opencv为基础的人脸识别。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-20T15:41:18.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="于诗洋-Mr.Yu">
-<meta name="twitter:description" content="佛曰：前世如若不相欠，今生又怎会相见">
+<meta name="twitter:title" content="基于opencv的图像识别（一）--人脸识别">
+<meta name="twitter:description" content="opencv作为一个老牌的图像处理库，拥有其独特的魅力，这篇文章将会简单介绍以opencv为基础的人脸识别。">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yushiyang.top/archives/2017/page/2/"/>
+  <link rel="canonical" href="http://yushiyang.top/2017/12/20/opencv-one/"/>
 
 
 
 
 
-  <title>归档 | 于诗洋-Mr.Yu</title>
+  <title>基于opencv的图像识别（一）--人脸识别 | 于诗洋-Mr.Yu</title>
   
 
 
@@ -157,7 +159,7 @@ MathJax.Hub.Config({
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -295,189 +297,297 @@ MathJax.Hub.Config({
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yushiyang.top/2017/12/20/opencv-one/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="于诗洋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="于诗洋-Mr.Yu">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">基于opencv的图像识别（一）--人脸识别</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T23:09:14+08:00">
+                2017-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/opencv图像处理/" itemprop="url" rel="index">
+                    <span itemprop="name">opencv图像处理</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2017/12/20/opencv-one/" class="leancloud_visitors" data-flag-title="基于opencv的图像识别（一）--人脸识别">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>℃
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/10/restful-一/" itemprop="url">
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">RESTful(一)</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  253
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-10T14:01:47+08:00"
-              content="2017-10-10" >
-          10-10
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
 
+          
+              <div class="post-description">
+                  opencv作为一个老牌的图像处理库，拥有其独特的魅力，这篇文章将会简单介绍以opencv为基础的人脸识别。
+              </div>
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/10/10/yueshefu/" itemprop="url">
-              
-                <span itemprop="name">php实现单向链表解决约瑟夫环问题</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-10-10T11:18:42+08:00"
-              content="2017-10-10" >
-          10-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/update-qiniu/" itemprop="url">
-              
-                <span itemprop="name">php上传图片到七牛</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T14:45:10+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/talk-front/" itemprop="url">
-              
-                <span itemprop="name">说在前面</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T11:30:41+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <h2 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h2><p>这里我们主要记录一个简单实用的一个小demo，所需要的模型采用github上的一个训练模型，可以前去下载<a href="https://github.com/opencv/opencv/tree/master/data/haarcascades" target="_blank" rel="noopener">人脸识别训练模型</a></p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>获取haar的人脸模型数据</li>
+<li>处理我们的图像，灰度化，这样是为了简化数据计算</li>
+<li>画图显示图像</li>
+</ol>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import cv2</span><br><span class="line"></span><br><span class="line">imgPath = &apos;./recoginition.jpg&apos; # 图片地址</span><br><span class="line"></span><br><span class="line"># 获取人脸模型训练数据</span><br><span class="line">face_cascade = cv2.CascadeClassifier(r&apos;./xml/haarcascade_frontalface_default.xml&apos;) # github下载的人脸模型地址</span><br><span class="line"></span><br><span class="line"># 读取图片</span><br><span class="line">image = cv2.imread(imgPath)</span><br><span class="line">gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # 图片灰度处理</span><br><span class="line"></span><br><span class="line"># 探测图片中的人脸</span><br><span class="line">faces = face_cascade.detectMultiScale(</span><br><span class="line">     gray,</span><br><span class="line">     scaleFacator = 1.1,</span><br><span class="line">     minNeighbors = 5,</span><br><span class="line">     minSize = (5, 5),</span><br><span class="line">     flags = cv2.CASCADE_SCALE_IMAGE</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(&apos;发现了&#123;0&#125;&apos;.format(len(faces)))</span><br><span class="line"></span><br><span class="line">for(x, y, w, h) in faces:</span><br><span class="line">    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0) ,2) # 画一个矩形把识别的脸框起来</span><br><span class="line"></span><br><span class="line">cv2.imshow(&apos;Find Faces!&apos;, image)</span><br><span class="line">cv2.waiKey(0)</span><br></pre></td></tr></table></figure>
       
-
     </div>
+    
+    
+    
+
+    <div>
+      
+         <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2017/12/20/opencv-one/">基于opencv的图像识别（一）--人脸识别</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 于诗洋 的个人博客">于诗洋</a></p>
+  <p><span>发布时间:</span>2017年12月20日 - 23:12</p>
+  <p><span>最后更新:</span>2017年12月20日 - 23:12</p>
+  <p><span>原始链接:</span><a href="/2017/12/20/opencv-one/" title="基于opencv的图像识别（一）--人脸识别">http://yushiyang.top/2017/12/20/opencv-one/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yushiyang.top/2017/12/20/opencv-one/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+    </div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>啦啦啦啦</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="于诗洋 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
+          
+            <a href="/tags/opencv/" rel="tag"><i class="fa fa-tag"></i> opencv</a>
+          
+            <a href="/tags/图像/" rel="tag"><i class="fa fa-tag"></i> 图像</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/06/StudyEveryday-Deep Learning/" rel="next" title="天天进步一点点AI篇--Deep Learning">
+                <i class="fa fa-chevron-left"></i> 天天进步一点点AI篇--Deep Learning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -485,6 +595,12 @@ MathJax.Hub.Config({
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTA1Mi83NjAw"></div>
+    
+  </div>
+
 
         </div>
         
@@ -505,8 +621,17 @@ MathJax.Hub.Config({
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -618,6 +743,22 @@ MathJax.Hub.Config({
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#人脸识别"><span class="nav-number">1.</span> <span class="nav-text"><a href="#&#x4EBA;&#x8138;&#x8BC6;&#x522B;" class="headerlink" title="&#x4EBA;&#x8138;&#x8BC6;&#x522B;"></a>&#x4EBA;&#x8138;&#x8BC6;&#x522B;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">2.</span> <span class="nav-text"><a href="#&#x6D41;&#x7A0B;" class="headerlink" title="&#x6D41;&#x7A0B;"></a>&#x6D41;&#x7A0B;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">3.</span> <span class="nav-text"><a href="#&#x5B9E;&#x4F8B;" class="headerlink" title="&#x5B9E;&#x4F8B;"></a>&#x5B9E;&#x4F8B;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -784,6 +925,17 @@ MathJax.Hub.Config({
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

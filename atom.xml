@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yushiyang.top/"/>
-  <updated>2017-11-06T09:32:00.000Z</updated>
+  <updated>2017-12-20T15:41:18.938Z</updated>
   <id>http://yushiyang.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于opencv的图像识别（一）--人脸识别</title>
+    <link href="http://yushiyang.top/2017/12/20/opencv-one/"/>
+    <id>http://yushiyang.top/2017/12/20/opencv-one/</id>
+    <published>2017-12-20T15:09:14.000Z</published>
+    <updated>2017-12-20T15:41:18.938Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="人脸识别"><a href="#人脸识别" class="headerlink" title="人脸识别"></a>人脸识别</h2><p>这里我们主要记录一个简单实用的一个小demo，所需要的模型采用github上的一个训练模型，可以前去下载<a href="https://github.com/opencv/opencv/tree/master/data/haarcascades" target="_blank" rel="noopener">人脸识别训练模型</a></p><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol><li>获取haar的人脸模型数据</li><li>处理我们的图像，灰度化，这样是为了简化数据计算</li><li>画图显示图像</li></ol><h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">import cv2</span><br><span class="line"></span><br><span class="line">imgPath = &apos;./recoginition.jpg&apos; # 图片地址</span><br><span class="line"></span><br><span class="line"># 获取人脸模型训练数据</span><br><span class="line">face_cascade = cv2.CascadeClassifier(r&apos;./xml/haarcascade_frontalface_default.xml&apos;) # github下载的人脸模型地址</span><br><span class="line"></span><br><span class="line"># 读取图片</span><br><span class="line">image = cv2.imread(imgPath)</span><br><span class="line">gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) # 图片灰度处理</span><br><span class="line"></span><br><span class="line"># 探测图片中的人脸</span><br><span class="line">faces = face_cascade.detectMultiScale(</span><br><span class="line">     gray,</span><br><span class="line">     scaleFacator = 1.1,</span><br><span class="line">     minNeighbors = 5,</span><br><span class="line">     minSize = (5, 5),</span><br><span class="line">     flags = cv2.CASCADE_SCALE_IMAGE</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(&apos;发现了&#123;0&#125;&apos;.format(len(faces)))</span><br><span class="line"></span><br><span class="line">for(x, y, w, h) in faces:</span><br><span class="line">    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0) ,2) # 画一个矩形把识别的脸框起来</span><br><span class="line"></span><br><span class="line">cv2.imshow(&apos;Find Faces!&apos;, image)</span><br><span class="line">cv2.waiKey(0)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      opencv作为一个老牌的图像处理库，拥有其独特的魅力，这篇文章将会简单介绍以opencv为基础的人脸识别。
+    
+    </summary>
+    
+      <category term="opencv图像处理" scheme="http://yushiyang.top/categories/opencv%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="python" scheme="http://yushiyang.top/tags/python/"/>
+    
+      <category term="AI" scheme="http://yushiyang.top/tags/AI/"/>
+    
+      <category term="opencv" scheme="http://yushiyang.top/tags/opencv/"/>
+    
+      <category term="图像" scheme="http://yushiyang.top/tags/%E5%9B%BE%E5%83%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>天天进步一点点AI篇--Deep Learning</title>
@@ -64,6 +92,8 @@
       <category term="天天进步一点点AI篇" scheme="http://yushiyang.top/categories/%E5%A4%A9%E5%A4%A9%E8%BF%9B%E6%AD%A5%E4%B8%80%E7%82%B9%E7%82%B9AI%E7%AF%87/"/>
     
     
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="python" scheme="http://yushiyang.top/tags/python/"/>
     
       <category term="AI" scheme="http://yushiyang.top/tags/AI/"/>
@@ -71,8 +101,6 @@
       <category term="数学" scheme="http://yushiyang.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -94,6 +122,8 @@
       <category term="天天进步一点点AI篇" scheme="http://yushiyang.top/categories/%E5%A4%A9%E5%A4%A9%E8%BF%9B%E6%AD%A5%E4%B8%80%E7%82%B9%E7%82%B9AI%E7%AF%87/"/>
     
     
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="python" scheme="http://yushiyang.top/tags/python/"/>
     
       <category term="AI" scheme="http://yushiyang.top/tags/AI/"/>
@@ -101,8 +131,6 @@
       <category term="数学" scheme="http://yushiyang.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -124,6 +152,8 @@
       <category term="天天进步一点点AI篇" scheme="http://yushiyang.top/categories/%E5%A4%A9%E5%A4%A9%E8%BF%9B%E6%AD%A5%E4%B8%80%E7%82%B9%E7%82%B9AI%E7%AF%87/"/>
     
     
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="python" scheme="http://yushiyang.top/tags/python/"/>
     
       <category term="AI" scheme="http://yushiyang.top/tags/AI/"/>
@@ -131,8 +161,6 @@
       <category term="数学" scheme="http://yushiyang.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -154,6 +182,8 @@
       <category term="天天进步一点点AI篇" scheme="http://yushiyang.top/categories/%E5%A4%A9%E5%A4%A9%E8%BF%9B%E6%AD%A5%E4%B8%80%E7%82%B9%E7%82%B9AI%E7%AF%87/"/>
     
     
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
+    
       <category term="python" scheme="http://yushiyang.top/tags/python/"/>
     
       <category term="AI" scheme="http://yushiyang.top/tags/AI/"/>
@@ -161,8 +191,6 @@
       <category term="数学" scheme="http://yushiyang.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -210,9 +238,9 @@
       <category term="php" scheme="http://yushiyang.top/categories/php/"/>
     
     
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
+    
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -236,9 +264,9 @@
     
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
     
-      <category term="RESTful" scheme="http://yushiyang.top/tags/RESTful/"/>
-    
       <category term="转载" scheme="http://yushiyang.top/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="RESTful" scheme="http://yushiyang.top/tags/RESTful/"/>
     
   </entry>
   
@@ -260,11 +288,11 @@
       <category term="前端" scheme="http://yushiyang.top/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="js" scheme="http://yushiyang.top/tags/js/"/>
     
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
+    
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
@@ -286,9 +314,9 @@
       <category term="架构" scheme="http://yushiyang.top/categories/%E6%9E%B6%E6%9E%84/"/>
     
     
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
+    
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="RESTful" scheme="http://yushiyang.top/tags/RESTful/"/>
     
@@ -312,9 +340,9 @@
       <category term="php" scheme="http://yushiyang.top/categories/php/"/>
     
     
-      <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
+    
+      <category term="算法" scheme="http://yushiyang.top/tags/%E7%AE%97%E6%B3%95/"/>
     
       <category term="转载" scheme="http://yushiyang.top/tags/%E8%BD%AC%E8%BD%BD/"/>
     
@@ -338,9 +366,9 @@
       <category term="php" scheme="http://yushiyang.top/categories/php/"/>
     
     
-      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
-    
       <category term="php" scheme="http://yushiyang.top/tags/php/"/>
+    
+      <category term="原创" scheme="http://yushiyang.top/tags/%E5%8E%9F%E5%88%9B/"/>
     
       <category term="七牛" scheme="http://yushiyang.top/tags/%E4%B8%83%E7%89%9B/"/>
     
